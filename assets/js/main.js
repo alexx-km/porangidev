@@ -1,4 +1,9 @@
 (function () {
+  if (document.body) {
+    document.body.classList.remove('no-js');
+    document.body.classList.add('js-enabled');
+  }
+
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('primary-nav');
