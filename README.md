@@ -9,6 +9,7 @@ Static GitHub Pages site for **Porangi Dev** with:
 
 - `/index.html` - portfolio landing page
 - `/privacy-policy.html` - privacy policy page
+- `/tldl/privacy-policy.html` - privacy policy for the TLDL Android app (English + German)
 - `/assets/css/styles.css` - shared styling
 - `/assets/js/main.js` - small enhancements (mobile nav toggle + dynamic footer year)
 

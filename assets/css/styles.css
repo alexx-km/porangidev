@@ -308,6 +308,11 @@ h2 {
   padding-left: 1.2rem;
 }
 
+.legal-content address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 52rem) {
   .hero-grid {
     grid-template-columns: 1fr;
