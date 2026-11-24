@@ -35,168 +35,156 @@
         <p><strong>TLDL - "Too long, didn't listen"</strong></p>
         <p>Controller (GDPR Art. 4(7)):</p>
         <address>
-          Alexander Kamm
+          Alexander Kamm (postal address: see the <a href="../impressum.html" lang="de">Impressum</a>)
         </address>
         <p>
           E-mail: <strong>alexander.kamm@proton.me</strong><br />
-          Last updated: 15 November 2026
+          Last updated: 24 November 2026
         </p>
 
         <h3>Summary</h3>
         <p>
-          TLDL does not collect, store on its own servers, share or sell any personal data. Voice
-          messages are transcribed on your device. If you choose to, TLDL keeps the text of your
-          transcripts in an encrypted history on your device, which never leaves it. There is no
-          account, no advertising, no analytics and no tracking.
+          TLDL does not collect any personal data automatically, and does not store it on its own servers, share it or sell it. Voice messages are transcribed on your device. If you choose to, TLDL keeps the text of your transcripts in an encrypted history on your device, which never leaves it. There is no account, no advertising, no analytics and no tracking. The app goes online only to download the model files you choose; the developer never receives your audio, your transcripts or the app's error log unless you yourself send them.
         </p>
 
         <h3>What the app does</h3>
         <p>
-          You share a voice message (an audio file) with TLDL. The app converts the speech to text
-          on your phone and shows the text in a floating window above other apps.
+          You share a voice message (an audio file) with TLDL. The app converts the speech to text on your phone and shows the text in a floating window above other apps.
         </p>
 
         <h3>Audio and transcripts</h3>
         <ul>
           <li>
-            The audio you share is copied into a private folder of the app on your device, which is
-            excluded from backups, so it can be decoded and transcribed. It is processed locally and
-            is never uploaded.
+            The audio you share is copied into a private folder of the app on your device (the app's "no backup" storage, so it is never part of a backup), so it can be decoded and transcribed. It is processed locally and is never uploaded.
           </li>
           <li>
-            The copy is deleted when you close the floating window (and at the latest a day after
-            you shared it).
+            TLDL deletes the copy when the transcript is finished and you have closed it or moved on from it in the floating window. A copy that is still needed (for example because the transcription is unfinished or failed) or that was left behind is removed by an automatic cleanup once it is older than 24 hours. The cleanup runs whenever you share another voice message and about once a day, so a leftover copy can exist for up to roughly 48 hours. Uninstalling the app or clearing its storage removes it at once.
           </li>
           <li>
-            By default the transcript exists only in memory while the floating window is open. If
-            you turn on the transcript history (see below), the text of each transcript is also
-            saved on your device. TLDL never saves the audio, and has no cloud features.
+            By default the transcript exists only in memory while the floating window is open. If you turn on the transcript history (see below), the text of each transcript is also saved on your device. TLDL never saves the audio permanently, and has no cloud features.
           </li>
           <li>
-            If you select "System (Google on-device)", transcription is performed by Android's
-            on-device speech recognizer, provided by your device or Google. TLDL requests offline
-            recognition. Handling by that component is governed by its provider's privacy policy.
+            If you select "System (Google on-device)", transcription is performed by Android's on-device speech recognizer, provided by your device or Google. TLDL requests on-device recognition, so the audio is processed on your phone by that system service. If the language pack is missing, TLDL asks Android to install it; Android (Google Play services) then downloads and manages the pack under its provider's terms, and TLDL has no influence on that download. Handling by that component is governed by its provider's privacy policy (for Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).
           </li>
           <li>
-            Only when you tap "Summarise" (or "TL;DR"), a language model that you downloaded from
-            Hugging Face writes a summary of the transcript on your device, and the summary is
-            stored with the transcript in the history, if you keep one; the text never leaves your
-            device.
+            Only when you tap "Summarise" (or "TL;DR"), a language model that you downloaded writes a summary of the transcript on your device, and the summary is stored with the transcript in the history, if you keep one; the text never leaves your device. This summary model (Gemma) is an optional download.
+          </li>
+          <li>
+            <strong>Copy:</strong> TLDL puts a transcript or summary on the system clipboard only when you tap the copy button. TLDL marks the entry as sensitive so that Android hides it from the clipboard preview, but other apps may be able to read the clipboard while the text is on it, depending on your Android version and settings.
           </li>
         </ul>
 
         <h3>Signal voice memos (optional)</h3>
-<p>
-This feature is <strong>off by default</strong> and can be switched on in Settings. When it is
-on, TLDL looks for new audio files in the Music/Signal folder, which is where Signal saves a
-voice message when you save it. TLDL shows a notification with the length of the new memo.
-Nothing is transcribed until you start the transcription. The memo is then handled like any
-other shared audio: it is processed only on your device and is never uploaded. When the
-transcript is ready, its notification offers to delete the file, which removes the original
-memo from Music/Signal only after Android's own confirmation; TLDL deletes nothing without
-that confirmation. For this, TLDL asks for Android's permission to read audio files
-(READ_MEDIA_AUDIO), and only when you switch the setting on. While the setting is off, TLDL
-does not use it.
-</p>
-
-<h3>Transcript history (optional)</h3>
         <p>
-          The history is <strong>off by default</strong>. TLDL asks you once on the home screen
-          whether to keep one, and you can change your mind at any time in Settings.
+          This feature is <strong>off by default</strong> and can be switched on in Settings. When it is on, TLDL looks for new audio files in the Music/Signal folder, which is where Signal saves a voice message when you save it. It reads only the entries of that folder in Android's audio collection (such as the length and file type) to show a notification with the length of the new memo; other audio files are not used. Nothing is transcribed until you start the transcription. The memo is then handled like any other shared audio: it is processed only on your device and is never uploaded. When the transcript is ready, its notification offers to delete the file ("Delete file"), which removes the original memo from Music/Signal only after Android's own confirmation; TLDL deletes nothing without that confirmation. For this, TLDL asks for Android's permission to read audio files (READ_MEDIA_AUDIO; on Android 12 and older the storage permission READ_EXTERNAL_STORAGE), and only when you switch the setting on. While the setting is off, TLDL does not use it.
+        </p>
+
+        <h3>Transcript history (optional)</h3>
+        <p>
+          The history is <strong>off by default</strong>. TLDL asks you once on the home screen whether to keep one, and you can change your mind at any time in Settings.
         </p>
         <ul>
           <li>
-            <strong>What is saved:</strong> for each transcript, its text, the date and time you
-            shared it, the date in the voice message's file name (if it has one), the length, the
-            language and model used, the app it was shared from (if Android tells TLDL), and a
-            checksum of the audio file that lets TLDL recognise a memo you share twice. The audio
-            itself is not saved.
+            <strong>What is saved:</strong> for each transcript, its text, the date and time you shared it, the date in the voice message's file name (if it has one), the length, the language and model used, the app it was shared from (if Android tells TLDL), and a checksum of the audio file that lets TLDL recognise a memo you share twice. The audio itself is not saved.
           </li>
           <li>
-            <strong>Sender:</strong> TLDL does not read the sender from the voice message or from
-            your contacts. A sender name is saved only if you type it yourself on a transcript's
-            detail screen.
+            <strong>Sender:</strong> TLDL does not read the sender from the voice message or from your contacts. A sender name is saved only if you type it yourself on a transcript's detail screen.
           </li>
           <li>
-            <strong>Where and how:</strong> the history is stored only in the app's private storage
-            on your device, in a database encrypted with SQLCipher. Its key is generated on your
-            device and protected by the Android Keystore. It is excluded from cloud backup and
-            device-to-device transfer, and it is never uploaded.
+            <strong>Where and how:</strong> the history is stored only in the app's private storage on your device, in a database encrypted with SQLCipher. Its key is generated on your device and protected by the Android Keystore. It is excluded from cloud backup and device-to-device transfer, and it is never uploaded.
           </li>
           <li>
-            <strong>How long:</strong> you choose to keep transcripts for 7, 30 or 90 days, or
-            forever. Older transcripts are deleted automatically once a day.
+            <strong>How long:</strong> you choose to keep transcripts for 7, 30 or 90 days, or forever. Older transcripts are deleted automatically once a day.
           </li>
           <li>
-            <strong>Deleting:</strong> you can delete a single transcript (swipe it away or open it
-            and tap delete), delete all transcripts in Settings, or turn the history off and delete
-            what was saved. Clearing the app's storage or uninstalling the app removes it as well.
+            <strong>Deleting:</strong> you can delete a single transcript (swipe it away or open it and tap delete), delete all transcripts in Settings, or turn the history off and delete what was saved. Clearing the app's storage or uninstalling the app removes it as well.
           </li>
           <li>
-            <strong>Protection:</strong> the history screens are hidden from screenshots and the
-            recent-apps preview. You can also require your screen lock (fingerprint, face, PIN,
-            pattern or password) before the history opens; the check is done by Android and TLDL
-            receives no biometric data.
+            <strong>Protection:</strong> the history screens are hidden from screenshots and the recent-apps preview. You can also require your screen lock (fingerprint, face, PIN, pattern or password) before the history opens; the check is done by Android and TLDL receives no biometric data.
           </li>
           <li>
-            <strong>Other people's voice messages:</strong> the sender of a voice message is a third
-            party. Use the history for personal purposes only, for example to look something up
-            again later.
+            <strong>Other people's voice messages:</strong> the sender of a voice message is a third party. Use the history for personal purposes only, for example to look something up again later.
           </li>
         </ul>
 
-        <h3>Data stored on your device</h3>
+        <h3>Error log (diagnostics)</h3>
         <p>
-          TLDL stores your settings (selected speech model and language, and your history choices),
-          the downloaded speech model files and, if you turned it on, the encrypted transcript
-          history, in the app's private storage. This data stays on your device.
+          TLDL keeps a small error log in its private storage on your device (files/logs/diagnostics.log). It is a rolling file of about 64 KB; when it is full, the oldest entries are dropped. It records what went wrong: the time, error messages and, for errors and crashes, technical stack traces, plus technical details such as the names of the models used. The report you can create from it also contains the app version, your Android version and your device manufacturer and model. The log never contains your audio or transcripts.
+        </p>
+        <ul>
+          <li>
+            The log stays on your device. It leaves the device only if you tap "Share error log" in Settings and then choose an app to send it with; you decide whether and to whom. We do not receive it automatically.
+          </li>
+          <li>
+            You can delete the log at any time with "Clear" in Settings (Diagnostics), by clearing the app's storage or by uninstalling the app.
+          </li>
+          <li>
+            If you send the report to the developer by e-mail, it is processed only to look into the problem and to answer you, and is deleted when no longer needed (see "Legal bases").
+          </li>
+          <li>
+            The log is part of the app data that Android's backup can include (see "Data stored on your device and backups").
+          </li>
+        </ul>
+
+        <h3>Data stored on your device and backups</h3>
+        <p>
+          TLDL stores your settings (selected speech model and language, and your history choices), the downloaded speech model files, the error log and, if you turned it on, the encrypted transcript history, in the app's private storage. This data stays on your device.
+        </p>
+        <p>
+          If Android's backup (for example Google's cloud backup) or a device-to-device transfer is active on your phone, Android may include the app's settings and the error log in it. In that case they are stored in your Google account backup or copied to your new device, under the terms and privacy policy of that provider (for Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>), not under our control. The downloaded models and the transcript history are excluded from the backup and the transfer; the history's key and the temporary audio copies are in storage that is never backed up. You can switch the backup off in your Android settings.
         </p>
 
         <h3>Internet use</h3>
         <p>
-          TLDL uses the internet only to download the speech and summary model files that you
-          choose in Settings. The files are downloaded from:
+          TLDL uses the internet only to download the model files that you choose in Settings: the speech models and, if you want summaries, the optional summary model (Gemma). The files are downloaded from:
         </p>
         <ul>
-          <li>huggingface.co (Hugging Face), and</li>
-          <li>github.com (a small voice-activity detection file).</li>
+          <li>
+            huggingface.co (Hugging Face; the download may be redirected to Hugging Face's content delivery network), and
+          </li>
+          <li>
+            github.com (a small voice-activity detection file, Silero VAD, from the sherpa-onnx project's releases).
+          </li>
         </ul>
         <p>
-          When you download, these services receive your IP address and standard request data (for
-          example the device's user agent), as with any web download. TLDL sends no personal data,
-          no audio and no identifiers to them. Please see the privacy policies of Hugging Face and
-          GitHub for how they handle such request data. After the models are downloaded, TLDL works
-          without a connection.
+          When you download, these services receive your IP address and standard request data (for example the time of the request and the HTTP client's user-agent string), as with any web download, and may process it in countries outside the EU/EEA. This is technically necessary to deliver the file you asked for. TLDL sends no personal data, no audio, no transcripts and no identifiers to them. The providers process this data under their own responsibility; please see their privacy policies: Hugging Face (<a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a>) and GitHub (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>). After the models are downloaded, TLDL works without a connection. You can delete downloaded models in Settings.
         </p>
+
+        <h3>Legal bases (GDPR Art. 6)</h3>
+        <p>
+          TLDL processes the content you share only on your own device, under your control; the developer has no access to it. Where personal data is processed in connection with TLDL beyond that:
+        </p>
+        <ul>
+          <li>
+            <strong>Model downloads</strong> (transmission of your IP address and request data to Hugging Face and GitHub): Art. 6(1)(b) GDPR, because it is necessary to provide the function you request (downloading a model), and Art. 6(1)(f) GDPR, our legitimate interest in delivering the app's models to you in a secure and working way.
+          </li>
+          <li>
+            <strong>Error logs you send to us</strong> and <strong>e-mails you write to us:</strong> Art. 6(1)(b) or (f) GDPR (answering your request and investigating the problem you report). Sending a log is your voluntary decision.
+          </li>
+          <li>
+            <strong>Optional features</strong> (history, Signal voice memos, summaries, history lock) are off by default and run only on your device after you switch them on; the permissions they need are requested only then.
+          </li>
+        </ul>
 
         <h3>Permissions</h3>
         <ul>
           <li>
-            <strong>Display over other apps (SYSTEM_ALERT_WINDOW):</strong> to show the floating
-            transcript above your messenger.
+            <strong>Display over other apps (SYSTEM_ALERT_WINDOW):</strong> to show the floating transcript above your messenger.
           </li>
           <li>
-            <strong>Foreground service (special use) and notifications:</strong> to keep the
-            floating window running while a message is transcribed and displayed, and to show the
-            required ongoing notification.
+            <strong>Foreground service (special use) and notifications:</strong> to keep the floating window running while a message is transcribed and displayed, and to show the required ongoing notification.
           </li>
           <li>
-            <strong>Foreground service (media processing and data sync):</strong> to transcribe a
-            voice message you shared, and to finish a model download you started, even if you leave
-            the app, with a progress notification.
+            <strong>Foreground service (media processing and data sync):</strong> to transcribe a voice message you shared, and to finish a model download you started, even if you leave the app, with a progress notification.
           </li>
           <li>
-            <strong>Biometric / screen lock (USE_BIOMETRIC):</strong> only if you switch on the
-            history lock, to let Android ask for your screen lock before the history opens.
+            <strong>Biometric / screen lock (USE_BIOMETRIC):</strong> only if you switch on the history lock, to let Android ask for your screen lock before the history opens.
           </li>
           <li>
-<strong>Read audio files (READ_MEDIA_AUDIO):</strong> only if you switch on the optional Signal
-voice memo setting, to see new voice memos in the Music/Signal folder. Android's permission
-covers audio files in general; TLDL uses it only for this purpose and only while the setting
-is on.
-</li>
-<li>
-            <strong>Internet:</strong> only for downloading speech models, as described above.
+            <strong>Read audio files (READ_MEDIA_AUDIO; READ_EXTERNAL_STORAGE on Android 12 and older):</strong> only if you switch on the optional Signal voice memo setting, to see new voice memos in the Music/Signal folder. Android's permission covers audio files in general; TLDL uses it only for this purpose and only while the setting is on.
+          </li>
+          <li>
+            <strong>Internet:</strong> only for downloading models, as described above.
           </li>
         </ul>
         <p>
@@ -205,28 +193,23 @@ is on.
 
         <h3>Third parties, ads and tracking</h3>
         <p>
-          TLDL contains no advertising, no analytics or crash-reporting SDKs and no tracking. It
-          does not share data with third parties.
+          TLDL contains no advertising, no analytics or crash-reporting SDKs and no tracking. It does not share data with third parties. The only third parties involved are the download servers described under "Internet use", and the Android and Google components of your own device (speech recognizer, backup) if you use them.
         </p>
 
         <h3>Children</h3>
         <p>
-          TLDL is not directed at children under 13 (or the applicable age in your country) and does
-          not knowingly collect any data from anyone.
+          TLDL is intended for people aged 18 and over and is not directed at children. We do not knowingly process data of children, in particular not of children under 16 (the age limit for consent to online services in Germany).
         </p>
 
         <h3>Your rights</h3>
         <p>
-          Because TLDL does not collect or store personal data on our side, there is no personal
-          data held by us to access, correct or delete. All data created by the app is on your
-          device; you can delete it at any time: delete saved transcripts one by one or all at once
-          in the app, delete the models in Settings, clear the app's storage, or uninstall the app.
-          For any questions you can contact us at <strong>alexander.kamm@proton.me</strong>.
+          Because TLDL does not collect or store personal data on our side, there is usually no personal data held by us to access, correct or delete. All data created by the app is on your device; you can delete it at any time: delete saved transcripts one by one or all at once in the app, clear the error log, delete the models in Settings, clear the app's storage, or uninstall the app.
         </p>
         <p>
-          You also have the right to lodge a complaint with a data protection supervisory authority
-          (GDPR Art. 77), for example the authority of the German federal state where you live or
-          where the controller is based.
+          Where we do process personal data about you (for example an e-mail or an error log you sent us), you have the right under the GDPR to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18) and data portability (Art. 20). You have the right to <strong>object</strong> at any time, on grounds relating to your particular situation, to processing based on Art. 6(1)(f) GDPR (Art. 21). For any request or question you can contact us at <strong>alexander.kamm@proton.me.</strong>
+        </p>
+        <p>
+          You also have the right to lodge a complaint with a data protection supervisory authority (GDPR Art. 77), for example the authority of the German federal state where you live, where you work or where the controller is based.
         </p>
 
         <h3>Changes</h3>
@@ -236,8 +219,7 @@ is on.
 
         <h3>Trademarks</h3>
         <p>
-          TLDL is an independent app. It is not affiliated with, endorsed by or sponsored by
-          WhatsApp or Meta. Names of other products are trademarks of their owners.
+          TLDL is an independent app. It is not affiliated with, endorsed by or sponsored by WhatsApp, Meta or Signal. WhatsApp and Meta are trademarks of Meta Platforms, Inc. or its affiliates; Signal is a trademark of its respective owner. Names of other products are trademarks of their owners.
         </p>
       </section>
 
@@ -247,178 +229,156 @@ is on.
         <p><strong>TLDL - "Too long, didn't listen"</strong></p>
         <p>Verantwortlicher (Art. 4 Nr. 7 DSGVO):</p>
         <address>
-          Alexander Kamm
+          Alexander Kamm (Postanschrift: siehe <a href="../impressum.html" lang="de">Impressum</a>)
         </address>
         <p>
           E-Mail: <strong>alexander.kamm@proton.me</strong><br />
-          Stand: 15. November 2026
+          Stand: 24. November 2026
         </p>
 
         <h3>Kurzfassung</h3>
         <p>
-          TLDL erhebt, speichert (auf eigenen Servern), teilt oder verkauft keine
-          personenbezogenen Daten. Sprachnachrichten werden auf deinem Gerät transkribiert. Auf
-          Wunsch speichert TLDL den Text deiner Transkripte in einem verschlüsselten Verlauf auf
-          deinem Gerät, der es nie verlässt. Es gibt kein Konto, keine Werbung, keine Analyse und
-          kein Tracking.
+          TLDL erhebt keine personenbezogenen Daten automatisch, speichert sie nicht auf eigenen Servern und gibt sie weder weiter noch verkauft sie sie. Sprachnachrichten werden auf deinem Gerät transkribiert. Auf Wunsch speichert TLDL den Text deiner Transkripte in einem verschlüsselten Verlauf auf deinem Gerät, der es nie verlässt. Es gibt kein Konto, keine Werbung, keine Analyse und kein Tracking. Die App geht nur online, um die von dir gewählten Modelldateien herunterzuladen; der Entwickler erhält weder dein Audio noch deine Transkripte noch das Fehlerprotokoll der App, es sei denn, du schickst sie ihm selbst.
         </p>
 
         <h3>Was die App macht</h3>
         <p>
-          Du teilst eine Sprachnachricht (Audiodatei) mit TLDL. Die App wandelt die Sprache auf
-          deinem Smartphone in Text um und zeigt den Text in einem schwebenden Fenster über anderen
-          Apps an.
+          Du teilst eine Sprachnachricht (Audiodatei) mit TLDL. Die App wandelt die Sprache auf deinem Smartphone in Text um und zeigt den Text in einem schwebenden Fenster über anderen Apps an.
         </p>
 
         <h3>Audio und Transkripte</h3>
         <ul>
           <li>
-            Das geteilte Audio wird in einen privaten Ordner der App auf deinem Gerät kopiert, der
-            von Backups ausgenommen ist, damit es dekodiert und transkribiert werden kann. Die
-            Verarbeitung erfolgt lokal; es wird nichts hochgeladen.
+            Das geteilte Audio wird in einen privaten Ordner der App auf deinem Gerät kopiert (den „Kein-Backup“-Speicher der App, er ist also nie Teil einer Sicherung), damit es dekodiert und transkribiert werden kann. Die Verarbeitung erfolgt lokal; es wird nichts hochgeladen.
           </li>
           <li>
-            Die Kopie wird gelöscht, sobald du das schwebende Fenster schließt (spätestens einen Tag
-            nach dem Teilen).
+            TLDL löscht die Kopie, sobald das Transkript fertig ist und du es im schwebenden Fenster geschlossen oder zur nächsten Nachricht gewechselt hast. Eine Kopie, die noch gebraucht wird (z. B. weil die Transkription noch läuft oder fehlgeschlagen ist) oder die übrig geblieben ist, wird von einer automatischen Bereinigung entfernt, sobald sie älter als 24 Stunden ist. Die Bereinigung läuft, wenn du eine weitere Sprachnachricht teilst, und etwa einmal täglich; eine übrig gebliebene Kopie kann daher bis zu rund 48 Stunden existieren. Das Deinstallieren der App oder das Leeren ihres Speichers entfernt sie sofort.
           </li>
           <li>
-            Standardmäßig existiert das Transkript nur im Arbeitsspeicher, solange das schwebende
-            Fenster geöffnet ist. Wenn du den Transkript-Verlauf einschaltest (siehe unten), wird der
-            Text jedes Transkripts zusätzlich auf deinem Gerät gespeichert. Das Audio speichert TLDL
-            nie, und es gibt keine Cloud-Funktionen.
+            Standardmäßig existiert das Transkript nur im Arbeitsspeicher, solange das schwebende Fenster geöffnet ist. Wenn du den Transkript-Verlauf einschaltest (siehe unten), wird der Text jedes Transkripts zusätzlich auf deinem Gerät gespeichert. Das Audio speichert TLDL nie dauerhaft, und es gibt keine Cloud-Funktionen.
           </li>
           <li>
-            Wenn du "System (Google on-device)" wählst, übernimmt die Spracherkennung von Android auf
-            dem Gerät die Transkription (bereitgestellt von deinem Gerätehersteller bzw. Google).
-            TLDL fordert Offline-Erkennung an. Für diese Komponente gilt die Datenschutzerklärung
-            ihres Anbieters.
+            Wenn du "System (Google on-device)" wählst, übernimmt die Spracherkennung von Android auf dem Gerät die Transkription (bereitgestellt von deinem Gerätehersteller bzw. Google). TLDL fordert die Erkennung direkt auf dem Gerät an; das Audio wird also von diesem Systemdienst auf deinem Smartphone verarbeitet. Fehlt das Sprachpaket, bittet TLDL Android, es zu installieren; Android (Google Play-Dienste) lädt und verwaltet das Paket dann nach den Bedingungen seines Anbieters, TLDL hat darauf keinen Einfluss. Für diese Komponente gilt die Datenschutzerklärung ihres Anbieters (bei Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).
           </li>
           <li>
-            Nur wenn du auf "Zusammenfassen" (bzw. "TL;DR") tippst, erstellt ein von Hugging Face
-            heruntergeladenes Sprachmodell auf deinem Gerät eine Zusammenfassung des Transkripts, die
-            mit dem Transkript im Verlauf gespeichert wird, falls du einen führst; der Text verlässt
-            dein Gerät nie.
+            Nur wenn du auf "Zusammenfassen" (bzw. "TL;DR") tippst, erstellt ein von dir heruntergeladenes Sprachmodell auf deinem Gerät eine Zusammenfassung des Transkripts, die mit dem Transkript im Verlauf gespeichert wird, falls du einen führst; der Text verlässt dein Gerät nie. Dieses Zusammenfassungsmodell (Gemma) ist ein optionaler Download.
+          </li>
+          <li>
+            <strong>Kopieren:</strong> TLDL legt ein Transkript oder eine Zusammenfassung nur dann in die Zwischenablage des Systems, wenn du auf die Kopieren-Schaltfläche tippst. TLDL kennzeichnet den Eintrag als sensibel, damit Android ihn in der Vorschau der Zwischenablage ausblendet; je nach Android-Version und Einstellungen können andere Apps die Zwischenablage aber lesen, solange der Text darin liegt.
           </li>
         </ul>
 
         <h3>Signal-Sprachnachrichten (optional)</h3>
-<p>
-Diese Funktion ist <strong>standardmäßig aus</strong> und kann in den Einstellungen
-eingeschaltet werden. Ist sie an, sucht TLDL nach neuen Audiodateien im Ordner
-Music/Signal, in dem Signal eine Sprachnachricht ablegt, wenn du sie speicherst. TLDL zeigt
-eine Benachrichtigung mit der Länge der neuen Nachricht. Es wird nichts transkribiert, bis du
-die Transkription startest. Danach wird die Nachricht wie jede andere geteilte Audiodatei
-behandelt: Sie wird nur auf deinem Gerät verarbeitet und nie hochgeladen. Sobald das
-Transkript fertig ist, bietet die Benachrichtigung an, die Datei zu löschen. Das entfernt die
-ursprüngliche Nachricht aus Music/Signal erst nach der Bestätigung durch Android selbst; ohne
-diese Bestätigung löscht TLDL nichts. Dafür bittet TLDL um die Android-Berechtigung zum Lesen
-von Audiodateien (READ_MEDIA_AUDIO), und zwar nur, wenn du die Einstellung einschaltest.
-Solange sie aus ist, nutzt TLDL die Berechtigung nicht.
-</p>
-
-<h3>Transkript-Verlauf (optional)</h3>
         <p>
-          Der Verlauf ist <strong>standardmäßig aus</strong>. TLDL fragt dich einmal auf dem
-          Startbildschirm, ob du einen Verlauf möchtest, und du kannst deine Entscheidung jederzeit
-          in den Einstellungen ändern.
+          Diese Funktion ist <strong>standardmäßig aus</strong> und kann in den Einstellungen eingeschaltet werden. Ist sie an, sucht TLDL nach neuen Audiodateien im Ordner Music/Signal, in dem Signal eine Sprachnachricht ablegt, wenn du sie speicherst. Dafür liest TLDL nur die Einträge dieses Ordners aus der Audio-Sammlung von Android (etwa Länge und Dateityp) und zeigt eine Benachrichtigung mit der Länge der neuen Nachricht; andere Audiodateien werden nicht verwendet. Es wird nichts transkribiert, bis du die Transkription startest. Danach wird die Nachricht wie jede andere geteilte Audiodatei behandelt: Sie wird nur auf deinem Gerät verarbeitet und nie hochgeladen. Sobald das Transkript fertig ist, bietet die Benachrichtigung an, die Datei zu löschen („Datei löschen“). Das entfernt die ursprüngliche Nachricht aus Music/Signal erst nach der Bestätigung durch Android selbst; ohne diese Bestätigung löscht TLDL nichts. Dafür bittet TLDL um die Android-Berechtigung zum Lesen von Audiodateien (READ_MEDIA_AUDIO; unter Android 12 und älter die Speicherberechtigung READ_EXTERNAL_STORAGE), und zwar nur, wenn du die Einstellung einschaltest. Solange sie aus ist, nutzt TLDL die Berechtigung nicht.
+        </p>
+
+        <h3>Transkript-Verlauf (optional)</h3>
+        <p>
+          Der Verlauf ist <strong>standardmäßig aus</strong>. TLDL fragt dich einmal auf dem Startbildschirm, ob du einen Verlauf möchtest, und du kannst deine Entscheidung jederzeit in den Einstellungen ändern.
         </p>
         <ul>
           <li>
-            <strong>Was gespeichert wird:</strong> pro Transkript der Text, Datum und Uhrzeit, zu der
-            du es geteilt hast, das Datum im Dateinamen der Sprachnachricht (falls vorhanden), die
-            Länge, die verwendete Sprache und das verwendete Modell, die App, aus der geteilt wurde
-            (falls Android sie TLDL mitteilt), sowie eine Prüfsumme der Audiodatei, damit TLDL eine
-            zweimal geteilte Nachricht wiedererkennt. Das Audio selbst wird nicht gespeichert.
+            <strong>Was gespeichert wird:</strong> pro Transkript der Text, Datum und Uhrzeit, zu der du es geteilt hast, das Datum im Dateinamen der Sprachnachricht (falls vorhanden), die Länge, die verwendete Sprache und das verwendete Modell, die App, aus der geteilt wurde (falls Android sie TLDL mitteilt), sowie eine Prüfsumme der Audiodatei, damit TLDL eine zweimal geteilte Nachricht wiedererkennt. Das Audio selbst wird nicht gespeichert.
           </li>
           <li>
-            <strong>Absender:</strong> TLDL liest den Absender weder aus der Sprachnachricht noch aus
-            deinen Kontakten. Ein Absendername wird nur gespeichert, wenn du ihn selbst in der
-            Detailansicht eines Transkripts eintippst.
+            <strong>Absender:</strong> TLDL liest den Absender weder aus der Sprachnachricht noch aus deinen Kontakten. Ein Absendername wird nur gespeichert, wenn du ihn selbst in der Detailansicht eines Transkripts eintippst.
           </li>
           <li>
-            <strong>Wo und wie:</strong> Der Verlauf liegt nur im privaten Speicher der App auf
-            deinem Gerät, in einer mit SQLCipher verschlüsselten Datenbank. Der Schlüssel wird auf
-            deinem Gerät erzeugt und vom Android Keystore geschützt. Der Verlauf ist von der
-            Cloud-Sicherung und der Geräte-zu-Geräte-Übertragung ausgeschlossen und wird nie
-            hochgeladen.
+            <strong>Wo und wie:</strong> Der Verlauf liegt nur im privaten Speicher der App auf deinem Gerät, in einer mit SQLCipher verschlüsselten Datenbank. Der Schlüssel wird auf deinem Gerät erzeugt und vom Android Keystore geschützt. Der Verlauf ist von der Cloud-Sicherung und der Geräte-zu-Geräte-Übertragung ausgeschlossen und wird nie hochgeladen.
           </li>
           <li>
-            <strong>Wie lange:</strong> Du wählst, ob Transkripte 7, 30 oder 90 Tage oder für immer
-            aufbewahrt werden. Ältere Transkripte werden einmal täglich automatisch gelöscht.
+            <strong>Wie lange:</strong> Du wählst, ob Transkripte 7, 30 oder 90 Tage oder für immer aufbewahrt werden. Ältere Transkripte werden einmal täglich automatisch gelöscht.
           </li>
           <li>
-            <strong>Löschen:</strong> Du kannst ein einzelnes Transkript löschen (wegwischen oder
-            öffnen und auf Löschen tippen), in den Einstellungen alle Transkripte löschen oder den
-            Verlauf ausschalten und das Gespeicherte löschen. Auch das Leeren des App-Speichers oder
-            das Deinstallieren der App entfernt ihn.
+            <strong>Löschen:</strong> Du kannst ein einzelnes Transkript löschen (wegwischen oder öffnen und auf Löschen tippen), in den Einstellungen alle Transkripte löschen oder den Verlauf ausschalten und das Gespeicherte löschen. Auch das Leeren des App-Speichers oder das Deinstallieren der App entfernt ihn.
           </li>
           <li>
-            <strong>Schutz:</strong> Die Verlaufsansichten sind in Screenshots und in der Übersicht
-            der zuletzt genutzten Apps verborgen. Du kannst außerdem verlangen, dass vor dem Öffnen
-            des Verlaufs deine Displaysperre abgefragt wird (Fingerabdruck, Gesicht, PIN, Muster oder
-            Passwort); die Prüfung übernimmt Android, TLDL erhält keine biometrischen Daten.
+            <strong>Schutz:</strong> Die Verlaufsansichten sind in Screenshots und in der Übersicht der zuletzt genutzten Apps verborgen. Du kannst außerdem verlangen, dass vor dem Öffnen des Verlaufs deine Displaysperre abgefragt wird (Fingerabdruck, Gesicht, PIN, Muster oder Passwort); die Prüfung übernimmt Android, TLDL erhält keine biometrischen Daten.
           </li>
           <li>
-            <strong>Sprachnachrichten anderer Personen:</strong> Wer eine Sprachnachricht schickt,
-            ist eine dritte Person. Nutze den Verlauf nur für private Zwecke, zum Beispiel um später
-            etwas nachzuschlagen.
+            <strong>Sprachnachrichten anderer Personen:</strong> Wer eine Sprachnachricht schickt, ist eine dritte Person. Nutze den Verlauf nur für private Zwecke, zum Beispiel um später etwas nachzuschlagen.
           </li>
         </ul>
 
-        <h3>Auf dem Gerät gespeicherte Daten</h3>
+        <h3>Fehlerprotokoll (Diagnose)</h3>
         <p>
-          TLDL speichert deine Einstellungen (gewähltes Sprachmodell und Sprache sowie deine
-          Verlaufs-Optionen), die heruntergeladenen Modelldateien und, falls du ihn eingeschaltet
-          hast, den verschlüsselten Transkript-Verlauf im privaten Speicher der App. Diese Daten
-          bleiben auf deinem Gerät.
+          TLDL führt im privaten Speicher der App auf deinem Gerät ein kleines Fehlerprotokoll (files/logs/diagnostics.log). Es ist eine rollierende Datei von etwa 64 KB; ist sie voll, werden die ältesten Einträge verworfen. Es hält fest, was schiefgegangen ist: Zeitpunkt, Fehlermeldungen und bei Fehlern und Abstürzen technische Stacktraces sowie technische Angaben wie die Namen der verwendeten Modelle. Der Bericht, den du daraus erstellen kannst, enthält zusätzlich die App-Version, deine Android-Version sowie Hersteller und Modell deines Geräts. Dein Audio und deine Transkripte stehen nie im Protokoll.
+        </p>
+        <ul>
+          <li>
+            Das Protokoll bleibt auf deinem Gerät. Es verlässt es nur, wenn du in den Einstellungen auf "Fehlerprotokoll teilen" tippst und eine App zum Senden auswählst; du entscheidest, ob und an wen. Wir erhalten es nicht automatisch.
+          </li>
+          <li>
+            Du kannst das Protokoll jederzeit mit "Löschen" in den Einstellungen (Diagnose) löschen, den App-Speicher leeren oder die App deinstallieren.
+          </li>
+          <li>
+            Wenn du den Bericht per E-Mail an den Entwickler schickst, wird er nur verarbeitet, um dem Problem nachzugehen und dir zu antworten, und gelöscht, sobald er nicht mehr gebraucht wird (siehe „Rechtsgrundlagen“).
+          </li>
+          <li>
+            Das Protokoll gehört zu den App-Daten, die die Android-Sicherung enthalten kann (siehe „Auf dem Gerät gespeicherte Daten und Sicherungen“).
+          </li>
+        </ul>
+
+        <h3>Auf dem Gerät gespeicherte Daten und Sicherungen</h3>
+        <p>
+          TLDL speichert deine Einstellungen (gewähltes Sprachmodell und Sprache sowie deine Verlaufs-Optionen), die heruntergeladenen Modelldateien, das Fehlerprotokoll und, falls du ihn eingeschaltet hast, den verschlüsselten Transkript-Verlauf im privaten Speicher der App. Diese Daten bleiben auf deinem Gerät.
+        </p>
+        <p>
+          Ist auf deinem Smartphone die Android-Sicherung (z. B. die Google-Cloud-Sicherung) oder eine Geräte-zu-Geräte-Übertragung aktiv, kann Android die Einstellungen der App und das Fehlerprotokoll darin einschließen. Sie liegen dann in deiner Google-Konto-Sicherung oder werden auf dein neues Gerät kopiert, und zwar nach den Bedingungen und der Datenschutzerklärung dieses Anbieters (bei Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>) und nicht unter unserer Kontrolle. Die heruntergeladenen Modelle und der Transkript-Verlauf sind von Sicherung und Übertragung ausgenommen; der Schlüssel des Verlaufs und die temporären Audiokopien liegen in einem Speicher, der nie gesichert wird. Die Sicherung kannst du in den Android-Einstellungen ausschalten.
         </p>
 
         <h3>Internetnutzung</h3>
         <p>
-          TLDL nutzt das Internet nur, um die Sprach- und Zusammenfassungsmodell-Dateien
-          herunterzuladen, die du in den Einstellungen auswählst. Die Dateien kommen von:
+          TLDL nutzt das Internet nur, um die Modelldateien herunterzuladen, die du in den Einstellungen auswählst: die Sprachmodelle und, wenn du Zusammenfassungen möchtest, das optionale Zusammenfassungsmodell (Gemma). Die Dateien kommen von:
         </p>
         <ul>
-          <li>huggingface.co (Hugging Face) und</li>
-          <li>github.com (eine kleine Datei zur Spracherkennung von Sprechpausen).</li>
+          <li>
+            huggingface.co (Hugging Face; der Download kann auf das Content-Delivery-Netzwerk von Hugging Face weitergeleitet werden) und
+          </li>
+          <li>
+            github.com (eine kleine Datei zur Erkennung von Sprechpausen, Silero VAD, aus den Releases des sherpa-onnx-Projekts).
+          </li>
         </ul>
         <p>
-          Beim Download erhalten diese Dienste deine IP-Adresse und übliche Anfragedaten (z. B. den
-          User-Agent des Geräts), wie bei jedem Web-Download. TLDL sendet keine personenbezogenen
-          Daten, kein Audio und keine Kennungen an sie. Wie diese Dienste solche Anfragedaten
-          verarbeiten, steht in deren Datenschutzerklärungen. Nach dem Download funktioniert TLDL
-          ohne Verbindung.
+          Beim Download erhalten diese Dienste deine IP-Adresse und übliche Anfragedaten (z. B. den Zeitpunkt der Anfrage und die User-Agent-Kennung des HTTP-Clients), wie bei jedem Web-Download, und können sie auch in Ländern außerhalb der EU/des EWR verarbeiten. Das ist technisch nötig, um dir die angeforderte Datei zu liefern. TLDL sendet keine personenbezogenen Daten, kein Audio, keine Transkripte und keine Kennungen an sie. Die Anbieter verarbeiten diese Daten in eigener Verantwortung; Näheres steht in ihren Datenschutzerklärungen: Hugging Face (<a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a>) und GitHub (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>). Nach dem Download funktioniert TLDL ohne Verbindung. Heruntergeladene Modelle kannst du in den Einstellungen löschen.
         </p>
+
+        <h3>Rechtsgrundlagen (Art. 6 DSGVO)</h3>
+        <p>
+          TLDL verarbeitet die Inhalte, die du teilst, nur auf deinem eigenen Gerät und unter deiner Kontrolle; der Entwickler hat darauf keinen Zugriff. Soweit darüber hinaus im Zusammenhang mit TLDL personenbezogene Daten verarbeitet werden:
+        </p>
+        <ul>
+          <li>
+            <strong>Modell-Downloads</strong> (Übermittlung deiner IP-Adresse und der Anfragedaten an Hugging Face und GitHub): Art. 6 Abs. 1 lit. b DSGVO, weil es zur Bereitstellung der von dir gewünschten Funktion (Download eines Modells) erforderlich ist, sowie Art. 6 Abs. 1 lit. f DSGVO, unser berechtigtes Interesse, dir die Modelle der App sicher und funktionsfähig bereitzustellen.
+          </li>
+          <li>
+            <strong>Fehlerprotokolle, die du uns schickst,</strong> und <strong>E-Mails, die du uns schreibst:</strong> Art. 6 Abs. 1 lit. b oder f DSGVO (Beantwortung deiner Anfrage und Untersuchung des gemeldeten Problems). Das Senden eines Protokolls ist deine freiwillige Entscheidung.
+          </li>
+          <li>
+            <strong>Optionale Funktionen</strong> (Verlauf, Signal-Sprachnachrichten, Zusammenfassungen, Verlaufssperre) sind standardmäßig aus und laufen nur auf deinem Gerät, nachdem du sie eingeschaltet hast; die dafür nötigen Berechtigungen werden erst dann angefragt.
+          </li>
+        </ul>
 
         <h3>Berechtigungen</h3>
         <ul>
           <li>
-            <strong>Über anderen Apps anzeigen (SYSTEM_ALERT_WINDOW):</strong> um das schwebende
-            Transkript über deinem Messenger anzuzeigen.
+            <strong>Über anderen Apps anzeigen (SYSTEM_ALERT_WINDOW):</strong> um das schwebende Transkript über deinem Messenger anzuzeigen.
           </li>
           <li>
-            <strong>Vordergrunddienst (Sonderfall) und Benachrichtigungen:</strong> damit das
-            schwebende Fenster läuft, solange eine Nachricht transkribiert und angezeigt wird, und um
-            die vorgeschriebene Dauerbenachrichtigung zu zeigen.
+            <strong>Vordergrunddienst (Sonderfall) und Benachrichtigungen:</strong> damit das schwebende Fenster läuft, solange eine Nachricht transkribiert und angezeigt wird, und um die vorgeschriebene Dauerbenachrichtigung zu zeigen.
           </li>
           <li>
-            <strong>Vordergrunddienst (Medienverarbeitung und Datensynchronisierung):</strong> damit
-            eine geteilte Sprachnachricht transkribiert und ein von dir gestarteter Modell-Download
-            beendet wird, auch wenn du die App verlässt, mit Fortschrittsbenachrichtigung.
+            <strong>Vordergrunddienst (Medienverarbeitung und Datensynchronisierung):</strong> damit eine geteilte Sprachnachricht transkribiert und ein von dir gestarteter Modell-Download beendet wird, auch wenn du die App verlässt, mit Fortschrittsbenachrichtigung.
           </li>
           <li>
-            <strong>Biometrie / Displaysperre (USE_BIOMETRIC):</strong> nur, wenn du die
-            Verlaufssperre einschaltest, damit Android vor dem Öffnen des Verlaufs deine
-            Displaysperre abfragen kann.
+            <strong>Biometrie / Displaysperre (USE_BIOMETRIC):</strong> nur, wenn du die Verlaufssperre einschaltest, damit Android vor dem Öffnen des Verlaufs deine Displaysperre abfragen kann.
           </li>
           <li>
-<strong>Audiodateien lesen (READ_MEDIA_AUDIO):</strong> nur, wenn du die optionale Einstellung
-für Signal-Sprachnachrichten einschaltest, um neue Sprachnachrichten im Ordner Music/Signal
-zu erkennen. Die Android-Berechtigung gilt für Audiodateien allgemein; TLDL nutzt sie nur
-dafür und nur, solange die Einstellung an ist.
-</li>
-<li>
-            <strong>Internet:</strong> nur für den Download der Sprachmodelle, wie oben beschrieben.
+            <strong>Audiodateien lesen (READ_MEDIA_AUDIO; unter Android 12 und älter READ_EXTERNAL_STORAGE):</strong> nur, wenn du die optionale Einstellung für Signal-Sprachnachrichten einschaltest, um neue Sprachnachrichten im Ordner Music/Signal zu erkennen. Die Android-Berechtigung gilt für Audiodateien allgemein; TLDL nutzt sie nur dafür und nur, solange die Einstellung an ist.
+          </li>
+          <li>
+            <strong>Internet:</strong> nur für den Download der Modelle, wie oben beschrieben.
           </li>
         </ul>
         <p>
@@ -427,42 +387,33 @@ dafür und nur, solange die Einstellung an ist.
 
         <h3>Dritte, Werbung und Tracking</h3>
         <p>
-          TLDL enthält keine Werbung, keine Analyse- oder Absturzberichts-SDKs und kein Tracking. Es
-          werden keine Daten an Dritte weitergegeben.
+          TLDL enthält keine Werbung, keine Analyse- oder Absturzberichts-SDKs und kein Tracking. Es werden keine Daten an Dritte weitergegeben. Beteiligt sind nur die unter „Internetnutzung“ beschriebenen Download-Server sowie die Android- und Google-Komponenten deines eigenen Geräts (Spracherkennung, Sicherung), falls du sie nutzt.
         </p>
 
         <h3>Kinder</h3>
         <p>
-          TLDL richtet sich nicht an Kinder unter 13 Jahren (bzw. dem in deinem Land geltenden Alter)
-          und erhebt wissentlich keine Daten.
+          TLDL richtet sich an Personen ab 18 Jahren und nicht an Kinder. Wir verarbeiten wissentlich keine Daten von Kindern, insbesondere nicht von Kindern unter 16 Jahren (Altersgrenze für die Einwilligung bei Online-Diensten in Deutschland).
         </p>
 
         <h3>Deine Rechte</h3>
         <p>
-          Da TLDL auf unserer Seite keine personenbezogenen Daten erhebt oder speichert, liegen bei
-          uns keine Daten vor, die auskunftspflichtig, zu berichtigen oder zu löschen wären. Alle von
-          der App erzeugten Daten liegen auf deinem Gerät; du kannst sie jederzeit löschen:
-          gespeicherte Transkripte einzeln oder alle auf einmal in der App, die Modelle in den
-          Einstellungen, den App-Speicher leeren oder die App deinstallieren. Bei Fragen:
-          <strong>alexander.kamm@proton.me</strong>.
+          Da TLDL auf unserer Seite keine personenbezogenen Daten erhebt oder speichert, liegen bei uns in der Regel keine Daten vor, die auskunftspflichtig, zu berichtigen oder zu löschen wären. Alle von der App erzeugten Daten liegen auf deinem Gerät; du kannst sie jederzeit löschen: gespeicherte Transkripte einzeln oder alle auf einmal in der App, das Fehlerprotokoll löschen, die Modelle in den Einstellungen löschen, den App-Speicher leeren oder die App deinstallieren.
         </p>
         <p>
-          Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren
-          (Art. 77 DSGVO), z. B. bei der Behörde des Bundeslandes, in dem du wohnst oder in dem der
-          Verantwortliche seinen Sitz hat.
+          Soweit wir doch personenbezogene Daten von dir verarbeiten (z. B. eine E-Mail oder ein Fehlerprotokoll, das du uns geschickt hast), hast du nach der DSGVO das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20). Du hast außerdem das Recht, aus Gründen, die sich aus deiner besonderen Situation ergeben, jederzeit der Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO zu <strong>widersprechen</strong> (Art. 21). Für jede Anfrage und bei Fragen erreichst du uns unter <strong>alexander.kamm@proton.me.</strong>
+        </p>
+        <p>
+          Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO), z. B. bei der Behörde des Bundeslandes, in dem du wohnst oder arbeitest oder in dem der Verantwortliche seinen Sitz hat.
         </p>
 
         <h3>Änderungen</h3>
         <p>
-          Bei Änderungen dieser Erklärung wird die aktualisierte Fassung unter dieser URL mit neuem
-          Datum veröffentlicht.
+          Bei Änderungen dieser Erklärung wird die aktualisierte Fassung unter dieser URL mit neuem Datum veröffentlicht.
         </p>
 
         <h3>Marken</h3>
         <p>
-          TLDL ist eine unabhängige App. Sie steht in keiner Verbindung zu WhatsApp oder Meta und
-          wird von diesen weder unterstützt noch gesponsert. Produktnamen sind Marken ihrer
-          jeweiligen Inhaber.
+          TLDL ist eine unabhängige App. Sie steht in keiner Verbindung zu WhatsApp, Meta oder Signal und wird von diesen weder unterstützt noch gesponsert. WhatsApp und Meta sind Marken der Meta Platforms, Inc. bzw. ihrer verbundenen Unternehmen; Signal ist eine Marke ihres jeweiligen Inhabers. Produktnamen sind Marken ihrer jeweiligen Inhaber.
         </p>
       </section>
     </main>
